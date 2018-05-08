@@ -11,11 +11,12 @@ import { MenuComponent } from './menu/menu.component';
 import { MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatButtonModule } from '@angular/material';
 import { DishdetailComponent } from './dishdetail/dishdetail.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    DishdetailComponent,
+    DishdetailComponent
 
 
   ],
