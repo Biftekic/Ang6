@@ -1,3 +1,4 @@
+///<reference path="services/dish.service.ts"/>
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {MaterialModule} from './material.module';
@@ -10,7 +11,7 @@ import 'hammerjs';
 import { MenuComponent } from './menu/menu.component';
 import { MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatButtonModule } from '@angular/material';
 import { DishdetailComponent } from './dishdetail/dishdetail.component';
-
+import { DishService } from './services/dish.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { DishdetailComponent } from './dishdetail/dishdetail.component';
     MatButtonModule,
     FlexLayoutModule
   ],
-  providers: [],
+  providers: [DishService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
