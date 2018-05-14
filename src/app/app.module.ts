@@ -4,26 +4,34 @@ import { NgModule } from '@angular/core';
 import {MaterialModule} from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import { AppRoutingModule } from './app-routing/app-routing.module';
+import { MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatButtonModule } from '@angular/material';
+
+
+import 'hammerjs';
 
 
 import { AppComponent } from './app.component';
-import 'hammerjs';
-import { MenuComponent } from './menu/menu.component';
-import { MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatButtonModule } from '@angular/material';
-import { DishdetailComponent } from './dishdetail/dishdetail.component';
-import { DishService } from './services/dish.service';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { MenuComponent } from './menu/menu.component';
+import { DishdetailComponent } from './dishdetail/dishdetail.component';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+
+import { DishService } from './services/dish.service';
 
 @NgModule({
   declarations: [
     AppComponent,
+    HeaderComponent,
+    FooterComponent,
     MenuComponent,
     DishdetailComponent,
-    HeaderComponent,
-    FooterComponent
-
-
+    HomeComponent,
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +42,8 @@ import { FooterComponent } from './footer/footer.component';
     MatMenuModule,
     MatIconModule,
     MatButtonModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    AppRoutingModule
   ],
   providers: [DishService],
   bootstrap: [AppComponent]
