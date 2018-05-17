@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Leader} from '../shared/leader';
 import {LeaderService} from '../services/leader.service';
-import {DishService} from '../services/dish.service';
 
 @Component({
   selector: 'app-about',
