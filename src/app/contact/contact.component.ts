@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Feedback, ContactType } from '../shared/feedback';
 
 
+
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',

@@ -12,7 +12,6 @@ import {
   MatCheckboxModule,
   MatDialogModule,
   MatFormFieldModule,
-  MatTableModule,
   MatSlideToggleModule,
   MatSelectModule
 
@@ -32,7 +31,6 @@ import {
     MatCheckboxModule,
     MatDialogModule,
     MatFormFieldModule,
-    MatTableModule,
     MatSlideToggleModule,
     MatSelectModule
   ],
@@ -48,7 +46,6 @@ import {
     MatCheckboxModule,
     MatDialogModule,
     MatFormFieldModule,
-    MatTableModule,
     MatSlideToggleModule,
     MatSelectModule
   ]
