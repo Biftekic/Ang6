@@ -27,18 +27,17 @@
   </div>
 
   <div fxFlex="40" >
-    <mat-card-header>
-      <mat-card-title>
-        <h3>Comments</h3>
-      </mat-card-title>
-    </mat-card-header>
-    <mat-card-content *ngIf="dish.comments">
-      <mat-list *ngFor="let comment of dish.comments">
+    <mat-list *ngIf="dish.comments">
+      <h3>Comments</h3>
+      <mat-list-item *ngFor="let comment of dish.comments">
         <p matLine>{{comment.comment}}</p>
         <p matLine>{{comment.rating}} Stars</p>
         <p matLine> -- {{comment.author}}  {{comment.date | date}}</p>
-      </mat-list>
-    </mat-card-content>
+      </mat-list-item>
+    </mat-list>
+  </div>
+  <div [hidden]="dish">
+    <mat-spinner></mat-spinner><h4>Loading . . . Please Wait</h4>
   </div>
 
 </div>

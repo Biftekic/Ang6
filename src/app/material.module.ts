@@ -13,7 +13,8 @@ import {
   MatDialogModule,
   MatFormFieldModule,
   MatSlideToggleModule,
-  MatSelectModule
+  MatSelectModule,
+  MatProgressSpinnerModule
 
 
 } from '@angular/material';
@@ -32,7 +33,8 @@ import {
     MatDialogModule,
     MatFormFieldModule,
     MatSlideToggleModule,
-    MatSelectModule
+    MatSelectModule,
+    MatProgressSpinnerModule
   ],
   exports: [
     MatButtonModule,
@@ -47,7 +49,8 @@ import {
     MatDialogModule,
     MatFormFieldModule,
     MatSlideToggleModule,
-    MatSelectModule
+    MatSelectModule,
+    MatProgressSpinnerModule
   ]
 })
 export class MaterialModule {}
