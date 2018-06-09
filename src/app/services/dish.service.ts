@@ -14,22 +14,26 @@ export class DishService {
 
   getDishes(): Observable<Dish[]> {
     return this.http.get(baseURL + 'dishes')
-      .pipe(map(res => { return this.processhttpmsgservice.extractData(res); }));
+      .pipe(map(res => { return this.processhttpmsgservice.extractData(res); },  err => {
+        console.log(err); }));
   }
 
   getDish(id: number): Observable<Dish> {
     return  this.http.get(baseURL + 'dishes/' + id)
-      .pipe(map(res => { return this.processhttpmsgservice.extractData(res); }));
+      .pipe(map(res => { return this.processhttpmsgservice.extractData(res); },  err => {
+        console.log(err); }));
   }
 
   getFeaturedDish(): Observable<Dish> {
     return this.http.get(baseURL + 'dishes?featured=true')
-      .pipe(map(res => { return this.processhttpmsgservice.extractData(res)[0]; }));
+      .pipe(map(res => { return this.processhttpmsgservice.extractData(res)[0]; },  err => {
+        console.log(err); }));
   }
 
   getDishIds(): Observable<number[]> {
     return this.getDishes()
-      .pipe(map(dishes => { return dishes.map(dish => dish.id) }));
+      .pipe(map(dishes => { return dishes.map(dish => dish.id); },  err => {
+        console.log(err); }));
   }
 }
 
