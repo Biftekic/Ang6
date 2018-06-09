@@ -1,5 +1,6 @@
 ///<reference path="services/dish.service.ts"/>
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import {MaterialModule} from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -27,7 +28,8 @@ import {LeaderService} from './services/leader.service';
 import { LoginComponent } from './login/login.component';
 import {FormsModule} from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { baseURL } from './shared/baseurl';
+import {ProcesshttpmsgService} from './services/processhttpmsg.service';
 
 
 @NgModule({
@@ -44,6 +46,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     MaterialModule,
     FlexLayoutModule,
@@ -52,7 +55,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule
 
   ],
-  providers: [DishService, PromotionService, LeaderService],
+  providers: [DishService, PromotionService, LeaderService, {provide: 'BaseURL', useValue: baseURL}, ProcesshttpmsgService],
   entryComponents: [LoginComponent],
   bootstrap: [AppComponent]
 })
