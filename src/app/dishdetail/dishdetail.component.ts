@@ -24,6 +24,7 @@ export class DishdetailComponent implements OnInit {
     'author': '',
     'comment': ''
   };
+  dishcopy = null;
 
   validationMessages = {
     'author': {
@@ -51,7 +52,7 @@ export class DishdetailComponent implements OnInit {
     this.route.params
       .pipe(switchMap((params: Params) => this.dishservice.getDish(+params['id'])))
       .subscribe(dish => {
-        this.dish = dish;
+        this.dish = dish; this.dishcopy = dish;
         this.setPrevNext(dish.id);
       });
   }
@@ -100,5 +101,8 @@ export class DishdetailComponent implements OnInit {
       rating :5,
       comment: ''
     });
+    this.dishcopy.comments.push(this.comment);
+    this.dishcopy.save()
+      .subscribe(dish => { this.dish = dish; console.log(this.dish); });
   }
 }
